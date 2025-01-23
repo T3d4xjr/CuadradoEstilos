@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .interactivo {
+    width: 200px;
+    height: 200px;
+    background-color: #33f5a4;
+    border: 3px solid #58ff74;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: latido 3s infinite ease-in-out;
+    cursor: pointer;
+  }
+  
+  .interactivo:hover {
+    background-color: #16fa5b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  }
+  
+  .interactivo:active {
+    transform: rotate(45deg) scale(1.5);
+  }
+  
+  @keyframes latido {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+  
+  .vistaEspalda {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+  }
+  
+  .vistaFrente {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, -50%);
+  }
+  
