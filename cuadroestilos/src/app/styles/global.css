@@ -25,7 +25,9 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.5s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: latido 3s infinite ease-in-out;
+    animation: latido;
+    animation-duration: 5s;
+    animation-iteration-count: initial;
     cursor: pointer;
   }
   
